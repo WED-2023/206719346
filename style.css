@@ -140,38 +140,44 @@ li {
   height: 213px;
 }
 
+.like-container {
+  background-color: rgba(180, 161, 164, 0.8);
+  padding: 40px 20px 20px 20px;
+  border-radius: 20px;
+}
+
 #about {
-  background-image: url("/images/about.webp");
+  background-image: url("images/about.webp");
   height: 500px;
 }
 
 #photos {
-  background-image: url("/images/photos.webp");
+  background-image: url("images/photos.webp");
   height: 600px;
 }
 
 #playlist {
-  background-image: url("/images/playlist.webp");
+  background-image: url("images/playlist.webp");
   height: 600px;
 }
 
 #like {
-  background-image: url("/images/like.webp");
+  background-image: url("images/like.webp");
   height: 500px;
 }
 
 #qrcoder {
-  background-image: url("/images/qrcoder.webp");
+  background-image: url("images/qrcoder.webp");
   height: 500px;
 }
 
 #spa {
-  background-image: url("/images/spa.webp");
+  background-image: url("images/spa.webp");
   height: 500px;
 }
 
 #contact {
-  background-image: url("/images/contact.webp");
+  background-image: url("images/contact.webp");
   height: 600px;
 }
 
