@@ -1,7 +1,243 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+:root {
+  --color-one: #e0e0e0;
+  --color-two: #ec8e75;
+  --color-three: #b4a1a4;
+  --color-four: #541d3a;
+  --color-five: #000000;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-five);
+  color: var(--color-one);
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  text-align: left;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Menu */
+/* ---- */
+#menu {
+  background-color: var(--color-five);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+}
+
+#logo {
+  margin-right: 100px;
+}
+
+.logo-one {
+  font-weight: 500;
+  color: var(--color-one);
+  transition: color ease-in-out 0.3s;
+}
+
+.logo-second {
+  font-weight: 600;
+  color: var(--color-three);
+  transition: color ease-in-out 0.3s;
+}
+
+#menu:hover .logo-one {
+  color: var(--color-three);
+}
+
+#menu:hover .logo-second {
+  color: var(--color-one);
+}
+
+/* Main */
+/* ---- */
+
+#container {
+  position: relative;
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+
+/* Sections */
+/* -------- */
+.section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-one);
+}
+
+/* Layer before and after, used for the gradient overlay */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.section:hover::before {
+  opacity: 1;
+}
+
+.two-columns {
+  display: flex;
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 2;
+  gap: 40px;
+}
+
+.small-column {
+  flex: 1;
+  margin: auto;
+}
+
+.large-column {
+  text-align: center;
+  flex: 3;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-grid img {
+  width: 260px;
+  height: 173px;
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: border-radius ease-in-out 0.5s, width ease-in-out 0.5s,
+    height ease-in-out 0.5s, opacity ease-in-out 0.5s;
+}
+
+.image-grid img:hover {
+  border-radius: 50px;
+  opacity: 1;
+  width: 320px;
+  height: 213px;
+}
+
+#about {
+  background-image: url("/images/about.webp");
+  height: 500px;
+}
+
+#photos {
+  background-image: url("/images/photos.webp");
+  height: 600px;
+}
+
+#playlist {
+  background-image: url("/images/playlist.webp");
+  height: 600px;
+}
+
+#like {
+  background-image: url("/images/like.webp");
+  height: 500px;
+}
+
+#qrcoder {
+  background-image: url("/images/qrcoder.webp");
+  height: 500px;
+}
+
+#spa {
+  background-image: url("/images/spa.webp");
+  height: 500px;
+}
+
+#contact {
+  background-image: url("/images/contact.webp");
+  height: 600px;
+}
+
+/* Typography */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-one);
+  text-shadow: 0px 0px var(--color-one);
+  transition: text-shadow ease-in-out 0.5s, opacity ease-in-out 0.5s;
+  opacity: 0.7;
+}
+
+.section:hover .section-title {
+  text-shadow: 0px -10px var(--color-five);
+  opacity: 1;
+}
+
+.section-description {
+  text-align: center;
+  margin-top: -80px;
+  opacity: 0;
+  transition: margin-top ease-in-out 0.5s, opacity ease-in-out 0.5s;
+}
+
+.section:hover .section-description {
+  margin-top: -36px;
+  opacity: 0.7;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--color-one);
+  transition: color ease-in-out 0.3s;
+  font-weight: 500;
+}
+
+li a:hover {
+  color: var(--color-three);
+}
+
+/* Contact form */
+/* ----------- */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+  opacity: 0.8;
+}
+
+input {
+  height: 30px;
+}
+
+/* Decorations */
+/* ----------- */
+.seperator {
+  opacity: 0.3;
+}
+
+.seperator::before {
+  content: "\00a0";
+}
+
+.seperator::after {
+  content: "\00a0";
 }
