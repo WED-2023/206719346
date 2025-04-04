@@ -141,9 +141,12 @@ li {
 }
 
 .like-container {
-  background-color: rgba(180, 161, 164, 0.8);
-  padding: 40px 20px 20px 20px;
+  margin: auto;
+  background-color: rgba(180, 161, 164, 0.6);
+  /* Had to use weird padding cause of the iframe from facebook which i cannot control */
+  padding: 40px 20px 20px 100px;
   border-radius: 20px;
+  width: 50%;
 }
 
 #about {
