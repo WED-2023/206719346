@@ -189,12 +189,12 @@
                 style="height: 200px"
               ></textarea>
 
-              <div class="emoji-picker">
-                <span class="emoji">😊</span>
-                <span class="emoji">🎸</span>
-                <span class="emoji">🎶</span>
-                <span class="emoji">🤘</span>
-                <span class="emoji">🔥</span>
+              <div id="icons">
+                <span class="icon">😊</span>
+                <span class="icon">🎸</span>
+                <span class="icon">🎶</span>
+                <span class="icon">🤘</span>
+                <span class="icon">🔥</span>
               </div>
 
               <input type="submit" value="Submit" />
@@ -216,6 +216,18 @@
       $(document).scroll(function() {
          $('#menu').toggle($(this).scrollTop()>1000)
       });​
+    </script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const icons = document.querySelectorAll(".icon");
+        const textarea = document.getElementById("subject");
+
+        icons.forEach((icon) => {
+          icon.addEventListener("click", () => {
+            textarea.value += icon.textContent;
+          });
+        });
+      });
     </script>
   </body>
 </html>
