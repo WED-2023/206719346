@@ -6,7 +6,7 @@ A webpage dedicated to David Gilmour, implementing different effects for a visua
 
 ### Link to website
 
-https://wed-2023.github.io/assignment1-206719346/
+https://wed-2023.github.io/206719346/
 
 ## Features
 
