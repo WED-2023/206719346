@@ -296,7 +296,7 @@ input {
 }
 
 /* Small screens */
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 800px) {
   .two-columns {
     flex-direction: column;
     padding: 50px 50px; /* Used to fix padding issue for small screens */
@@ -309,8 +309,20 @@ input {
   }
 
   #menu {
-    display: flex;
-    height: 100px;
-    flex-wrap: wrap;
+    font-size: 0.7rem;
+  }
+
+  #logo {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #menu {
+    font-size: 0.6rem;
+  }
+
+  #logo {
+    margin-right: 20px;
   }
 }
