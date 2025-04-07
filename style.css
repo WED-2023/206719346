@@ -104,7 +104,8 @@ li {
   max-width: 1200px;
   width: 100%;
   z-index: 2;
-  gap: 40px;
+  gap: 20px;
+  padding: 0 20px;
 }
 
 .small-column {
@@ -197,8 +198,7 @@ li {
 
 #contact {
   background-image: url("images/contact.webp");
-
-  height: 600px;
+  min-height: 600px;
 }
 
 .background-cover {
@@ -293,4 +293,24 @@ input {
 
 .icon:hover {
   font-size: 30px;
+}
+
+/* Small screens */
+@media screen and (max-width: 950px) {
+  .two-columns {
+    flex-direction: column;
+    padding: 50px 50px; /* Used to fix padding issue for small screens */
+  }
+
+  .small-column,
+  .large-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  #menu {
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+  }
 }
